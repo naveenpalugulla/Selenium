@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -58,6 +59,21 @@ public class MethodsForSelenium implements InterfaceForSeleniumMethods{
 	public String getAttributeValue(WebElement element,String attributeName){
 		String attributeValue=element.getAttribute(attributeName);
 		return attributeValue;
+	}
+
+	public void selectDropdownOption(WebElement element, String type, String value) {
+		
+		Select dropdown=new Select(element);
+		/*switch(type)
+		{
+		case "index":
+			dropdown.selectByIndex(Integer.parseInt(value));
+		case "value":
+			dropdown.selectByValue(value);
+		case "visibletext":
+			dropdown.selectByVisibleText(value);
+		}*/
+		
 	}
 	
 }

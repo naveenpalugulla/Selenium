@@ -19,4 +19,6 @@ public interface InterfaceForSeleniumMethods {
 	
 	public String getAttributeValue(WebElement element,String attributeName);
 	
+	public void selectDropdownOption(WebElement element,String type,String value);
+	
 }
