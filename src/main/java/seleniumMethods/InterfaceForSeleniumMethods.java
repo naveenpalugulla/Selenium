@@ -2,6 +2,7 @@ package seleniumMethods;
 
 import java.util.List;
 
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public interface InterfaceForSeleniumMethods {
@@ -27,4 +28,11 @@ public interface InterfaceForSeleniumMethods {
 	
 	public String getFirstSelectedOptionInDropdown(WebElement element);
 	
+	public void navigateForword(WebDriver driver);
+	
+	public void navigateBack(WebDriver driver);
+	
+	public String getTitle(WebDriver driver);
+	
+	public String getCurrentURL(WebDriver driver);
 }

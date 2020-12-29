@@ -96,5 +96,24 @@ public class MethodsForSelenium implements InterfaceForSeleniumMethods{
 		String option=dropdown.getFirstSelectedOption().getText();
 		return option;
 	}
+
+	public void navigateForword(WebDriver d) {
+		d.navigate().forward();
+	}
+
+	public void navigateBack(WebDriver d) {
+		d.navigate().back();
+		
+	}
+
+	public String getTitle(WebDriver d) {
+		String title=d.getTitle();
+		return title;
+	}
+
+	public String getCurrentURL(WebDriver d) {
+		String url=d.getCurrentUrl();
+		return url;
+	}
 	
 }
