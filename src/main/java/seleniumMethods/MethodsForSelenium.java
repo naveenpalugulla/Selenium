@@ -1,5 +1,8 @@
 package seleniumMethods;
 
+import java.util.ArrayList;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -74,6 +77,24 @@ public class MethodsForSelenium implements InterfaceForSeleniumMethods{
 			dropdown.selectByVisibleText(value);
 		}*/
 		
+	}
+
+	public List<String> getAllOptionsInDropdown(WebElement element) {
+		Select dropdown=new Select(element);
+		List<WebElement> options = dropdown.getOptions();
+		List<String> dropdownOptions=new ArrayList<String>();
+		for(WebElement dropdownElement:options)
+		{
+			dropdownOptions.add(dropdownElement.getText());
+		}
+		
+		return dropdownOptions;
+	}
+
+	public String getFirstSelectedOptionInDropdown(WebElement element) {
+		Select dropdown=new Select(element);
+		String option=dropdown.getFirstSelectedOption().getText();
+		return option;
 	}
 	
 }

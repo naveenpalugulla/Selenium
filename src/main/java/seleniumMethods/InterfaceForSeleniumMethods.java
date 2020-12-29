@@ -1,5 +1,7 @@
 package seleniumMethods;
 
+import java.util.List;
+
 import org.openqa.selenium.WebElement;
 
 public interface InterfaceForSeleniumMethods {
@@ -20,5 +22,9 @@ public interface InterfaceForSeleniumMethods {
 	public String getAttributeValue(WebElement element,String attributeName);
 	
 	public void selectDropdownOption(WebElement element,String type,String value);
+	
+	public List<String> getAllOptionsInDropdown(WebElement element);
+	
+	public String getFirstSelectedOptionInDropdown(WebElement element);
 	
 }
