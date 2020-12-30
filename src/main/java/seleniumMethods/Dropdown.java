@@ -24,6 +24,6 @@ public enum Dropdown {
 		{
 			return "visibletext";
 		}
-	},
+	}
 	
 }

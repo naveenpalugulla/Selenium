@@ -2,6 +2,7 @@ package seleniumMethods;
 
 import java.util.List;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
@@ -37,4 +38,14 @@ public interface InterfaceForSeleniumMethods {
 	public String getCurrentURL(WebDriver driver);
 	
 	public void highLightElement(WebDriver driver, WebElement element);
+	
+	public void swithToFrameByIdOrNameOrIndex(WebDriver driver, String type, String value);
+	
+	public void swithToFrameByWebelement(WebDriver driver, WebElement element);
+	
+	public Alert swithToAlert(WebDriver driver);
+	
+	public void acceptAlert(Alert alert);
+	
+	public void rejectAlert(Alert alert);
 }
