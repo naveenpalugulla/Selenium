@@ -35,4 +35,6 @@ public interface InterfaceForSeleniumMethods {
 	public String getTitle(WebDriver driver);
 	
 	public String getCurrentURL(WebDriver driver);
+	
+	public void highLightElement(WebDriver driver, WebElement element);
 }

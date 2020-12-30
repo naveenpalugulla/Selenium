@@ -1,8 +1,9 @@
 package seleniumMethods;
-
+ 
 import java.util.ArrayList;
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -97,23 +98,27 @@ public class MethodsForSelenium implements InterfaceForSeleniumMethods{
 		return option;
 	}
 
-	public void navigateForword(WebDriver d) {
-		d.navigate().forward();
+	public void navigateForword(WebDriver driver) {
+		driver.navigate().forward();
 	}
 
-	public void navigateBack(WebDriver d) {
-		d.navigate().back();
+	public void navigateBack(WebDriver driver) {
+		driver.navigate().back();
 		
 	}
 
-	public String getTitle(WebDriver d) {
-		String title=d.getTitle();
+	public String getTitle(WebDriver driver) {
+		String title=driver.getTitle();
 		return title;
 	}
 
-	public String getCurrentURL(WebDriver d) {
-		String url=d.getCurrentUrl();
+	public String getCurrentURL(WebDriver driver) {
+		String url=driver.getCurrentUrl();
 		return url;
 	}
 	
+	public void highLightElement(WebDriver driver, WebElement element){
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
+	}
 }
