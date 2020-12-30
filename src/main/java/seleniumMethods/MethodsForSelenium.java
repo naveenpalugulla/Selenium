@@ -9,6 +9,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
@@ -154,6 +155,11 @@ public class MethodsForSelenium implements InterfaceForSeleniumMethods {
 	}
 	
 	@Override
+	public void swithToDefaultContent(WebDriver driver) {
+		driver.switchTo().defaultContent();
+	}
+	
+	@Override
 	public Alert swithToAlert(WebDriver driver) {
 		 Alert alert = driver.switchTo().alert();
 		return alert;
@@ -168,4 +174,24 @@ public class MethodsForSelenium implements InterfaceForSeleniumMethods {
 	public void rejectAlert(Alert alert) {
 		alert.dismiss();
 	}
+
+	@Override
+	public void rightClickOnPage(WebDriver driver) {
+		Actions action=new Actions(driver);
+		action.contextClick().build().perform();
+	}
+
+	@Override
+	public void rightClickOnElement(WebDriver driver, WebElement element) {
+		Actions action=new Actions(driver);
+		action.contextClick(element).build().perform();
+	}
+
+	@Override
+	public void doubleClickOnElement(WebDriver driver, WebElement element) {
+		Actions action=new Actions(driver);
+		action.doubleClick(element).build().perform();
+	}
+	
+	
 }

@@ -43,9 +43,17 @@ public interface InterfaceForSeleniumMethods {
 	
 	public void swithToFrameByWebelement(WebDriver driver, WebElement element);
 	
+	public void swithToDefaultContent(WebDriver driver);
+	
 	public Alert swithToAlert(WebDriver driver);
 	
 	public void acceptAlert(Alert alert);
 	
 	public void rejectAlert(Alert alert);
+	
+	public void rightClickOnPage(WebDriver driver);
+	
+	public void rightClickOnElement(WebDriver driver, WebElement element);
+	
+	public void doubleClickOnElement(WebDriver driver, WebElement element);
 }
