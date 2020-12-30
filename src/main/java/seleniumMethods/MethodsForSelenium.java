@@ -192,6 +192,33 @@ public class MethodsForSelenium implements InterfaceForSeleniumMethods {
 		Actions action=new Actions(driver);
 		action.doubleClick(element).build().perform();
 	}
+
+	@Override
+	public void scrollIntoView(WebDriver driver, WebElement element) {
+		JavascriptExecutor je = (JavascriptExecutor) driver;
+		je.executeScript("arguments[0].scrollIntoView(true);",element);	
+	}
+
+	@Override
+	public String getText(WebElement element) {
+		String text=element.getText();
+		return text;
+	}
+
+	@Override
+	public void refreshPage(WebDriver driver) {
+		driver.navigate().refresh();
+	}
+
+	@Override
+	public void closeBrowser(WebDriver driver) {
+		driver.close();
+	}
+
+	@Override
+	public void quitBrowser(WebDriver driver) {
+		driver.quit();
+	}
 	
 	
 }

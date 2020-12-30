@@ -33,6 +33,8 @@ public interface InterfaceForSeleniumMethods {
 	
 	public void navigateBack(WebDriver driver);
 	
+	public void refreshPage(WebDriver driver);
+	
 	public String getTitle(WebDriver driver);
 	
 	public String getCurrentURL(WebDriver driver);
@@ -56,4 +58,12 @@ public interface InterfaceForSeleniumMethods {
 	public void rightClickOnElement(WebDriver driver, WebElement element);
 	
 	public void doubleClickOnElement(WebDriver driver, WebElement element);
+	
+	public void scrollIntoView(WebDriver driver, WebElement element);
+	
+	public String getText(WebElement element);
+	
+	public void closeBrowser(WebDriver driver);
+	
+	public void quitBrowser(WebDriver driver);
 }
