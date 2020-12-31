@@ -110,36 +110,36 @@ public class MethodsForSelenium implements InterfaceForSeleniumMethods {
 	}
 
 	@Override
-	public void navigateForword(WebDriver driver) {
+	public void navigateForword() {
 		driver.navigate().forward();
 	}
 
 	@Override
-	public void navigateBack(WebDriver driver) {
+	public void navigateBack() {
 		driver.navigate().back();
 
 	}
 
 	@Override
-	public String getTitle(WebDriver driver) {
+	public String getTitle() {
 		String title = driver.getTitle();
 		return title;
 	}
 
 	@Override
-	public String getCurrentURL(WebDriver driver) {
+	public String getCurrentURL() {
 		String url = driver.getCurrentUrl();
 		return url;
 	}
 
 	@Override
-	public void highLightElement(WebDriver driver, WebElement element) {
+	public void highLightElement(WebElement element) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("arguments[0].setAttribute('style', 'background: yellow; border: 2px solid red;');", element);
 	}
 
 	@Override
-	public void swithToFrameByIdOrNameOrIndex(WebDriver driver, String type, String value) {
+	public void swithToFrameByIdOrNameOrIndex(String type, String value) {
 		
 		 switch(type) { 
 		 case "index": driver.switchTo().frame(Integer.parseInt(value));
@@ -150,17 +150,17 @@ public class MethodsForSelenium implements InterfaceForSeleniumMethods {
 	}
 	
 	@Override
-	public void swithToFrameByWebelement(WebDriver driver, WebElement element) {
+	public void swithToFrameByWebelement(WebElement element) {
 		 driver.switchTo().frame(element);  
 	}
 	
 	@Override
-	public void swithToDefaultContent(WebDriver driver) {
+	public void swithToDefaultContent() {
 		driver.switchTo().defaultContent();
 	}
 	
 	@Override
-	public Alert swithToAlert(WebDriver driver) {
+	public Alert swithToAlert() {
 		 Alert alert = driver.switchTo().alert();
 		return alert;
 	}
@@ -176,25 +176,25 @@ public class MethodsForSelenium implements InterfaceForSeleniumMethods {
 	}
 
 	@Override
-	public void rightClickOnPage(WebDriver driver) {
+	public void rightClickOnPage() {
 		Actions action=new Actions(driver);
 		action.contextClick().build().perform();
 	}
 
 	@Override
-	public void rightClickOnElement(WebDriver driver, WebElement element) {
+	public void rightClickOnElement(WebElement element) {
 		Actions action=new Actions(driver);
 		action.contextClick(element).build().perform();
 	}
 
 	@Override
-	public void doubleClickOnElement(WebDriver driver, WebElement element) {
+	public void doubleClickOnElement(WebElement element) {
 		Actions action=new Actions(driver);
 		action.doubleClick(element).build().perform();
 	}
 
 	@Override
-	public void scrollIntoView(WebDriver driver, WebElement element) {
+	public void scrollIntoView(WebElement element) {
 		JavascriptExecutor je = (JavascriptExecutor) driver;
 		je.executeScript("arguments[0].scrollIntoView(true);",element);	
 	}
@@ -206,17 +206,17 @@ public class MethodsForSelenium implements InterfaceForSeleniumMethods {
 	}
 
 	@Override
-	public void refreshPage(WebDriver driver) {
+	public void refreshPage() {
 		driver.navigate().refresh();
 	}
 
 	@Override
-	public void closeBrowser(WebDriver driver) {
+	public void closeBrowser() {
 		driver.close();
 	}
 
 	@Override
-	public void quitBrowser(WebDriver driver) {
+	public void quitBrowser() {
 		driver.quit();
 	}
 	

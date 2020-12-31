@@ -3,7 +3,6 @@ package seleniumMethods;
 import java.util.List;
 
 import org.openqa.selenium.Alert;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public interface InterfaceForSeleniumMethods {
@@ -29,41 +28,41 @@ public interface InterfaceForSeleniumMethods {
 	
 	public String getFirstSelectedOptionInDropdown(WebElement element);
 	
-	public void navigateForword(WebDriver driver);
+	public void navigateForword();
 	
-	public void navigateBack(WebDriver driver);
+	public void navigateBack();
 	
-	public void refreshPage(WebDriver driver);
+	public void refreshPage();
 	
-	public String getTitle(WebDriver driver);
+	public String getTitle();
 	
-	public String getCurrentURL(WebDriver driver);
+	public String getCurrentURL();
 	
-	public void highLightElement(WebDriver driver, WebElement element);
+	public void highLightElement(WebElement element);
 	
-	public void swithToFrameByIdOrNameOrIndex(WebDriver driver, String type, String value);
+	public void swithToFrameByIdOrNameOrIndex(String type, String value);
 	
-	public void swithToFrameByWebelement(WebDriver driver, WebElement element);
+	public void swithToFrameByWebelement(WebElement element);
 	
-	public void swithToDefaultContent(WebDriver driver);
+	public void swithToDefaultContent();
 	
-	public Alert swithToAlert(WebDriver driver);
+	public Alert swithToAlert();
 	
 	public void acceptAlert(Alert alert);
 	
 	public void rejectAlert(Alert alert);
 	
-	public void rightClickOnPage(WebDriver driver);
+	public void rightClickOnPage();
 	
-	public void rightClickOnElement(WebDriver driver, WebElement element);
+	public void rightClickOnElement(WebElement element);
 	
-	public void doubleClickOnElement(WebDriver driver, WebElement element);
+	public void doubleClickOnElement(WebElement element);
 	
-	public void scrollIntoView(WebDriver driver, WebElement element);
+	public void scrollIntoView(WebElement element);
 	
 	public String getText(WebElement element);
 	
-	public void closeBrowser(WebDriver driver);
+	public void closeBrowser();
 	
-	public void quitBrowser(WebDriver driver);
+	public void quitBrowser();
 }
